@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+<book id="diffusion" lang="fr">
+
+    <bookinfo>
+        <title>Documentation pour le module de diffusion Version 1.1.0 (demande le module docmanager Version 1.1.0)</title>
+        
+        <author>
+            <firstname>Jeff</firstname> 
+            <surname>Saucier</surname>
+            <affiliation>
+                <address><email>jsaucier _AT_ infostrategique _DOT_ com</email></address>
+            </affiliation>
+        </author>
+    </bookinfo>
+
+    <chapter id="changelog">
+        <title>ChangeLog</title>
+        
+        <para>Je vous recommande de mettre &agrave; jour votre installation vers cette nouvelle version. Simplement copier les fichiers par dessus les anciens (faire attention &agrave; votre fichier "include/configs.php" !!)</para>
+        
+        <para>Voici ce qui a chang&eacute; depuis la derni&egrave;re version :</para>
+        <itemizedlist>
+            <listitem><para>Utilise maintenant le module docmanager Version 1.1.0</para></listitem>
+            <listitem><para>Correction de bugs</para></listitem>
+        </itemizedlist>
+    </chapter>
+    
+    <chapter id="informations">
+        <title>Informations</title>
+        
+        <para>Ce module permet d'envoyer un courriel avec des fichiers attach&eacute;s aux utilisateurs du site. Le module dans son &eacute;tat courant n'est pas vraiment utilisable car il est li&eacute; de pr&ecirc;t &agrave; la r&eacute;alit&eacute; de l'extranet du CRISP. Cependant, vous pouvez adapter facilement son utilisation.</para>
+        
+        <para>Voici ce que permet le module :</para>
+        <itemizedlist>
+            <listitem><para>Envoi d'un courriel soit aux personnes du groupe Membre ou &agrave; tous les utilisateurs</para></listitem>
+            <listitem><para>Archive le courriel dans les forums pour permettre une discussion</para></listitem>
+            <listitem><para>Place les documents dans le centre de documentation pour que les personnes ayant re&cedil;u le courriel puissent venir prendre le document</para></listitem>
+        </itemizedlist>
+        
+        <para>Ce module a &eacute;t&eacute; d&eacute;velopp&eacute; pour l'extranet du CRISP et est distribu&eacute; sous license GPL.</para>
+    </chapter>
+    
+    <chapter id="installation">
+        <title>Installation</title>
+
+        <section id="requirements">
+            <title>Pr&eacute; requis</title>
+            
+            <para>Ce module a &eacute;t&eacute; test&eacute; avec les configurations suivantes. D'autres configurations peuvent s&ucirc;rement &ecirc;tre support&eacute;es :</para>
+            
+            <itemizedlist>
+                <listitem><para>Le module dans son &eacute;tat courant n'est pas vraiment utilisable car il est li&eacute; de pr&ecirc;t &agrave; la r&eacute;alit&eacute; de l'extranet du CRISP. Cependant, vous pouvez adapter facilement son utilisation.</para></listitem>
+                <listitem><para>NOTE : Ce module d&eacute;pend de notre autre module, docmanager Version 1.1.0. Vous devez l'avoir afin de rendre le module de diffusion fonctionnel.</para></listitem>
+                <listitem><para>Xoops 2.0.7.x et 2.0.9.x</para></listitem>
+                <listitem><para>Linux et Apache</para></listitem>
+            </itemizedlist>            
+        </section>
+        
+        <section id="mod_installation">
+            <title>Installation</title>
+            
+            <para>Pour installer ce module, d&eacute;compresser l'archive et copier le r&eacute;pertoire "diffusion" dans le r&eacute;pertoire des modules de Xoops.</para>
+            <para>Aller ensuite activer le module dans la page d'administration de Xoops.</para>
+            <para>Maintenant, vous devez cr&eacute;er un r&eacute;pertoire dans le module docmanager. Je vous recommende de cr&eacute;er ce r&eacute;pertoire avec l'attribut cach&eacute; et de le mettre dans le r&eacute;pertoire Racine.</para>
+            <para>Par la suite, ajuster les permissions afin de s'assurer que tout le monde a acc&egrave;s au r&eacute;pertoire (les utilisateurs ne pourront pas voir ou acc&eacute;der le r&eacute;pertoire directement mais pourront aller chercher un fichier avec un lien direct).</para>
+            <para>Prenez en note le ID du r&eacute;pertoire et aller l'inscrire dans le fichier include/configs.php dans le module de diffusion.</para>
+            <para>Vous devez maintenant cr&eacute;er deux forums, l'un pour les membres et l'autres pour tous les utilisateurs. Prenez en note les ID des forums et aller les inscrire dans le fichier include/configs.php.</para>
+            <para>Vous pouvez aussi modifier le nombre de fichiers permis dans le fichier include/configs.php.</para>
+        </section>
+    </chapter>
+</book>

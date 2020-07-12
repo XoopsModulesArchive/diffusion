@@ -1,0 +1,67 @@
+<div align="center">
+    <H2><b><{$diffusion_main_title}></b></H2>
+</div>
+
+<br /><br />
+
+<form action="send_diffusion.php" enctype="multipart/form-data" method="post">
+
+<table>
+    <tr>
+        <td valign="bottom">
+            <br />
+            <br />
+            <b><{$diffusion_subject}></b><input type="text" size="50" name="subject_diffusion" value=""></input>
+        </td>
+        <td valign="bottom">
+            <b><{$diffusion_options}></b>
+            <br />
+            <input type="radio" name="options_diffusion" value="all" checked></input>&nbsp;<{$diffusion_options_all}>
+            <{if $diffusion_options_members!=""}>
+                <br />
+                <input type="radio" name="options_diffusion" value="members"></input>&nbsp;<{$diffusion_options_members}>
+            <{/if}>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <br />
+            <br />
+            <b><{$diffusion_body}></b>
+            <br />
+            <textarea cols="70" rows="15" name="body_diffusion"></textarea>
+        </td>
+    </tr>
+</table>
+
+<br />
+<br />
+
+<table>
+    <tr>
+        <td>
+            <b><{$diffusion_files}></b>
+            <br />
+            <{section name=i start=1 loop=$diffusion_number_of_files}>
+                <{$diffusion_files_number}><{$smarty.section.i.index}> : <input type="file" name="file_diffusion<{$smarty.section.i.index}>" value=""></input>
+                <br />
+            <{/section}>
+        </td>
+    </tr>
+</table>
+
+<br />
+<br />
+
+<table>
+    <tr>
+        <td align="center">
+            <br />
+            <b><font color='#FF0000'><{$diffusion_warning}></font></b>
+            <br /><br />
+            <input type="submit" value="<{$diffusion_submit}>"></input>
+        </td>
+    </tr>
+</table>
+
+</form>
